@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		6C3C9C68201968DB00BB624E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3C9C67201968DB00BB624E /* AppDelegate.swift */; };
-		6C3C9C6A201968DB00BB624E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3C9C69201968DB00BB624E /* ViewController.swift */; };
 		6C3C9C6D201968DB00BB624E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C3C9C6B201968DB00BB624E /* Main.storyboard */; };
 		6C3C9C6F201968DB00BB624E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C3C9C6E201968DB00BB624E /* Assets.xcassets */; };
 		6C3C9C72201968DB00BB624E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C3C9C70201968DB00BB624E /* LaunchScreen.storyboard */; };
+		6C3D8166201AB2AD00F93765 /* ConverterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3D8165201AB2AD00F93765 /* ConverterViewController.swift */; };
+		6C3D8168201AB2E500F93765 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3D8167201AB2E500F93765 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6C3C9C64201968DB00BB624E /* Moneta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moneta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C3C9C67201968DB00BB624E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6C3C9C69201968DB00BB624E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6C3C9C6C201968DB00BB624E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6C3C9C6E201968DB00BB624E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C3C9C71201968DB00BB624E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6C3C9C73201968DB00BB624E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C3D8165201AB2AD00F93765 /* ConverterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ConverterViewController.swift; path = Moneta/Controllers/ConverterViewController.swift; sourceTree = SOURCE_ROOT; };
+		6C3D8167201AB2E500F93765 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = Moneta/Controllers/HomeViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,40 @@
 		6C3C9C66201968DB00BB624E /* Moneta */ = {
 			isa = PBXGroup;
 			children = (
-				6C3C9C67201968DB00BB624E /* AppDelegate.swift */,
-				6C3C9C69201968DB00BB624E /* ViewController.swift */,
-				6C3C9C6B201968DB00BB624E /* Main.storyboard */,
-				6C3C9C6E201968DB00BB624E /* Assets.xcassets */,
-				6C3C9C70201968DB00BB624E /* LaunchScreen.storyboard */,
-				6C3C9C73201968DB00BB624E /* Info.plist */,
+				6C3D8162201AB15B00F93765 /* Controllers */,
+				6C3D8163201AB1AD00F93765 /* UI */,
+				6C3D8164201AB1BF00F93765 /* Infrastructure */,
 			);
 			path = Moneta;
+			sourceTree = "<group>";
+		};
+		6C3D8162201AB15B00F93765 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6C3D8167201AB2E500F93765 /* HomeViewController.swift */,
+				6C3D8165201AB2AD00F93765 /* ConverterViewController.swift */,
+			);
+			name = Controllers;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		6C3D8163201AB1AD00F93765 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				6C3C9C6E201968DB00BB624E /* Assets.xcassets */,
+				6C3C9C6B201968DB00BB624E /* Main.storyboard */,
+				6C3C9C70201968DB00BB624E /* LaunchScreen.storyboard */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		6C3D8164201AB1BF00F93765 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				6C3C9C67201968DB00BB624E /* AppDelegate.swift */,
+				6C3C9C73201968DB00BB624E /* Info.plist */,
+			);
+			path = Infrastructure;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,8 +164,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C3C9C6A201968DB00BB624E /* ViewController.swift in Sources */,
 				6C3C9C68201968DB00BB624E /* AppDelegate.swift in Sources */,
+				6C3D8166201AB2AD00F93765 /* ConverterViewController.swift in Sources */,
+				6C3D8168201AB2E500F93765 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,7 +304,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Moneta/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Moneta/Infrastructure/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.ddapps.moneta;
@@ -290,7 +319,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Moneta/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Moneta/Infrastructure/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.ddapps.moneta;
