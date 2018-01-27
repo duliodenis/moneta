@@ -12,15 +12,32 @@ class HomeViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     var conversionItem = [String]()
+    let converterSegueIdentifier = "ConverterViewController"
+    var currentIndexPathRow: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         conversionItem = ["Currency", "Length", "Speed", "Temperature"]
         
+        self.tableView.delegate = self
         self.tableView.dataSource = self
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == converterSegueIdentifier {
+            let destination = segue.destination as! ConverterViewController
+            destination.conversionType = conversionItem[currentIndexPathRow]
+        }
+    }
+
+}
+
+extension HomeViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        currentIndexPathRow = indexPath.row
+        performSegue(withIdentifier: converterSegueIdentifier, sender: nil)
+    }
 }
 
 extension HomeViewController: UITableViewDataSource {
